@@ -14,7 +14,7 @@ $(document).ready(function($) {
       });
     let appendData = myJsonData => {
       Object.keys(myJsonData).map((key, i) => {
-        console.log(key);
+       // console.log(key);
         $("#primaryMenu").append(
           '<li class="has-dropdown" data-content="' +
             key +
@@ -33,7 +33,7 @@ $(document).ready(function($) {
         );
 
         Object.keys(myJsonData[key]).map((data, i) => {
-          console.log(myJsonData[key][data]["title"]);
+          //console.log(myJsonData[key][data]["title"]);
           let lowerCaseItem = myJsonData[key][data]["title"]
             .toLowerCase()
             .replace(/\s/g, "");
@@ -50,7 +50,7 @@ $(document).ready(function($) {
               "</p></a></div></li>"
           );
         });
-        console.log("'''");
+        
       });
       this.element = element;
       this.mainNavigation = this.element.find(".main-nav");
