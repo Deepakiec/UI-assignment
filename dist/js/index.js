@@ -12,15 +12,14 @@ $(document).ready(function ($) {
 
     var appendData = function appendData(myJsonData) {
       Object.keys(myJsonData).map(function (key, i) {
-        console.log(key);
+        // console.log(key);
         $("#primaryMenu").append('<li class="has-dropdown" data-content="' + key + '"><a href="#0">' + key + "</a></li>");
         $("#dropdown-listData").append("<li id='" + key + "' class='dropdown'" + key + "><a href='#0' class='label'>" + key + "</a></li>");
         Object.keys(myJsonData[key]).map(function (data, i) {
-          console.log(myJsonData[key][data]["title"]);
+          //console.log(myJsonData[key][data]["title"]);
           var lowerCaseItem = myJsonData[key][data]["title"].toLowerCase().replace(/\s/g, "");
           $("#dropdown-listData li#" + key).append('<div class="content"><a class="linkContainer item-' + lowerCaseItem + '"href="/' + lowerCaseItem + '"><h3 class="linkTitle">' + myJsonData[key][data]["title"] + '</h3><p class="linkSub">' + myJsonData[key][data]["sub-title"] + "</p></a></div></li>");
         });
-        console.log("'''");
       });
       _this.element = element;
       _this.mainNavigation = _this.element.find(".main-nav");
