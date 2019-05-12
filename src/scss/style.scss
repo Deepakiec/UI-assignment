@@ -28,13 +28,13 @@ a {
 
 @include fontFace(
   "FontAwesome",
-  "UI-assignment/src/assets/fonts/fontawesome-webfont.woff",
+  "/UI-assignment/src/assets/fonts/fontawesome-webfont.woff",
   400,
   normal
 );
 @include fontFace(
   "Camphor",
-  "UI-assignment/src/assets/fonts/400-regular.woff2",
+  "/UI-assignment/src/assets/fonts/400-regular.woff2",
   400,
   normal
 );
